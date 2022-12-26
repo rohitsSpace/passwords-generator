@@ -1,27 +1,56 @@
 # PasswordsGenerator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+This is a fun password generator app which is developed in a weekend.
 
-## Development server
+### Link for the demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[Demo](https://passwords-generator-psi.vercel.app/)
 
-## Code scaffolding
+### Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![demo](demo.gif)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone repository
 
-## Running unit tests
+```
+git clone git@bitbucket.org:rohit_yadav/passwords-generator.git
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+go to
 
-## Running end-to-end tests
+```
+cd ./passwords-generator
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+install dependencies
 
-## Further help
+```
+npm i
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+run project
+
+```
+npm start
+```
+
+Runs the app in the development mode.
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
+
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+```
+npm run build
+```
+
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+
+### Deployment
+
+Your app is ready to be deployed and already deployed to vercel, you can use that to deploy or feel free to use any other tool for your deployment
