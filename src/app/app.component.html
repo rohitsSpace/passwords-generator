@@ -1,33 +1,88 @@
-<h1>Password Generator</h1>
-
-<div>
-  <input
-    placeholder="Enter length of the password"
-    (input)="handleLengthChange($any($event.target).value)"
-  />
-</div>
-
-<div>
-  <label> Include Letters </label>
-  <input type="checkbox" (change)="handleLettersChange()" />
-</div>
-<div>
-  <label> Include Numbers </label>
-  <input type="checkbox" (change)="handleNumbersChange()" />
-</div>
-<div>
-  <label> Include Symbols </label>
-  <input type="checkbox" (change)="handleSymbolsChange()" />
-</div>
-
-<button
-  (click)="handleClick()"
-  [disabled]="!(length && (includeSymbols || includeLetters || includeNumbers))"
+<div
+  class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center"
 >
-  Generate
-</button>
+  <div class="w-full">
+    <div class="text-xl font-medium text-black pb-4">Password Generator</div>
+    <div class="text-slate-500" class="w-full">
+      <input
+        placeholder="Enter length of the password"
+        (input)="handleLengthChange($any($event.target).value)"
+        type="text"
+        class="w-full"
+      />
+    </div>
+    <fieldset>
+      <div class="mt-4 space-y-4">
+        <div class="flex items-start">
+          <div class="flex h-5 items-center">
+            <input
+              id="letters"
+              name="letters"
+              type="checkbox"
+              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              (change)="handleLettersChange()"
+            />
+          </div>
+          <div class="ml-3 text-sm">
+            <label for="letters" class="font-medium text-gray-700"
+              >Include Letters</label
+            >
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="flex h-5 items-center">
+            <input
+              id="numbers"
+              name="numbers"
+              type="checkbox"
+              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              (change)="handleNumbersChange()"
+            />
+          </div>
+          <div class="ml-3 text-sm">
+            <label for="numbers" class="font-medium text-gray-700"
+              >Include Numbers</label
+            >
+          </div>
+        </div>
+        <div class="flex items-start pb-2">
+          <div class="flex h-5 items-center">
+            <input
+              id="symbols"
+              name="symbols"
+              type="checkbox"
+              class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              (change)="handleSymbolsChange()"
+            />
+          </div>
+          <div class="ml-3 text-sm">
+            <label for="symbols" class="font-medium text-gray-700"
+              >Include Symbols</label
+            >
+          </div>
+        </div>
+      </div>
+    </fieldset>
 
-<div *ngIf="password">
-  Your Password
-  <Input [value]="password" />
+    <button
+      (click)="handleClick()"
+      [disabled]="
+        !(length && (includeSymbols || includeLetters || includeNumbers))
+      "
+      type="button"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      [ngClass]="
+        !(length && (includeSymbols || includeLetters || includeNumbers))
+          ? 'opacity-50 cursor-not-allowed'
+          : ''
+      "
+    >
+      Generate
+    </button>
+
+    <div *ngIf="password" class="outline outline-1 mt-3 p-2">
+      Your Password
+      <Input [value]="password" class="text-white bg-blue-500 pl-2" />
+    </div>
+  </div>
 </div>
