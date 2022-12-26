@@ -20,7 +20,12 @@
   <input type="checkbox" (change)="handleSymbolsChange()" />
 </div>
 
-<button (click)="handleClick()">Generate</button>
+<button
+  (click)="handleClick()"
+  [disabled]="!(length && (includeSymbols || includeLetters || includeNumbers))"
+>
+  Generate
+</button>
 
 <div *ngIf="password">
   Your Password
