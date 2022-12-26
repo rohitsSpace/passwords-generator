@@ -1,6 +1,6 @@
 {
   "name": "passwords-generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,17 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
+  "homepage": "https://passwords-generator-psi.vercel.app/",
+  "keywords": [
+    "Angular",
+    "Password generator",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohitsSpace/passwords-generator.git"
+  },
   "dependencies": {
     "@angular/animations": "^15.0.0",
     "@angular/common": "^15.0.0",
